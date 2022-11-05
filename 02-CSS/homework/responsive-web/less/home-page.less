@@ -12,6 +12,9 @@
       padding:0 15px;
     }
 
+    img{
+      .img-header();
+    }
   }
 
   .music-images {
@@ -21,9 +24,22 @@
 
     img {
       width: 28%;
-      margin: 20px 2.5%;
+      margin: 20px auto 0;
       border-radius: 20px;
       height: 100%;
+    }
+    @media @phone{
+      display: block;
+      .tecnologia{
+        display: none;
+      }
+      .ondas {
+        display: none;
+      }
+      .auricular{
+        width: 98vw;
+        margin: 25px 1%;
+      }
     }
   }
 
@@ -31,7 +47,7 @@
     padding: 15px;
 
     h3 {
-      margin-top: 11px;
+      margin-top: 0px;
     }
 
     p {
@@ -58,6 +74,18 @@
       }
 
       .btn {
+        background: @btn-bg-color;
+        color: #fff;
+        text-align: center;
+        .btn-mixin(95px, 35px);
+        font-size: 15px;
+        padding-top: 10px;
+        border-radius: 8px;
+      }
+      .btn:hover{
+        background: #fff;
+        border: 2px solid #000;
+        color: #000;
       }
     }
 
@@ -71,5 +99,25 @@
         border-radius: 10px;
       }
     }
+    @media @phone{
+      flex-direction: column;
+      margin: 1%;
+      padding: 40px 0;
+      .actual-img{
+        order: -100;
+        width: 98%;
+        margin: 1%;
+      }
+      .actual-text{
+        width: 100%;
+        .btn{
+          .btn-mixin(96%, 45px);
+          margin: 2%;
+          font-size: 15px;
+          padding-top: 15px;
+        }
+      }
+    }
   }
 }
+
